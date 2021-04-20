@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { UserContext } from "../../App";
 import M from "materialize-css";
 
 const Login = () => {
+  const history = useHistory();
   const { state, dispatch } = useContext(UserContext);
   const [hide, setHide] = useState(false);
   const [mail, setMail] = useState("");
@@ -36,7 +37,7 @@ const Login = () => {
 
           dispatch({ type: "USER", payload: data.user });
 
-          window.location = "/profile";
+          history.push("/profile");
         } else {
           //   alert(data.message);
           M.toast({ html: data.message, classes: "red" });

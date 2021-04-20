@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import M from "materialize-css";
 
 const Signup = () => {
+  const history = useHistory();
   const [hide, setHide] = useState(false);
 
   const [name, setName] = useState("");
@@ -47,7 +48,7 @@ const Signup = () => {
         // alert(data.message);
 
         if (data.message == "Registered") {
-          window.location = "/login";
+          history.push("/login");
           M.toast({
             html: data.message + " " + "Successfully",
             classes: "green",
