@@ -1,38 +1,88 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap");
+.nav-h a {
+  color: #000;
+}
+.brand-logo {
+  font-family: "Grand Hotel", cursive;
+  font-weight: bold;
+}
+.login-card {
+  padding: 20px;
   text-align: center;
+  max-width: 340px;
+  margin: 100px auto;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login button {
+  margin-top: 20px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.profile-head {
+  margin: 0 50px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.pro-top {
+  display: flex;
+  justify-content: space-around;
+  margin: 18px 20px;
+  border-bottom: 0.7px solid grey;
+}
+.myself {
+  display: flex;
+  justify-content: space-between;
+  width: 108%;
+}
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.posts img {
+  width: 140px;
+  height: 140px;
+  margin-bottom: 10px;
+}
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.home-card {
+  max-width: 500px;
+  height: max-content;
+}
+.card-img img {
+  width: 500px;
+  height: 500px;
+}
+.create-card {
+  max-width: 420px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 100px auto;
+  height: 400px;
+}
+.box-head {
+  margin-bottom: 50px;
+}
+.box button {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin: 30px auto;
+}
+.comment-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.icon {
+  cursor: pointer;
+  color: red;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#toast-container {
+  top: 80px !important;
+  right: 20px !important;
+  left: auto !important;
 }
