@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { UserContext } from "../App";
 
 const Navbar = () => {
+  const history = useHistory();
   const { state, dispatch } = useContext(UserContext);
   const renderList = () => {
     if (state) {
@@ -18,7 +19,7 @@ const Navbar = () => {
           className="btn"
           onClick={() => {
             localStorage.clear();
-            window.location = "/login";
+            history.push("/login");
           }}
         >
           Logout
